@@ -1,0 +1,330 @@
+/* Graphite Frost Premium Design System */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+  background: #000000;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Page Container */
+.ds-page {
+  min-height: 100vh;
+  padding: 20px 20px 80px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* Page Title */
+.ds-page-title {
+  background: linear-gradient(135deg, rgba(35, 45, 55, 0.4), rgba(25, 30, 38, 0.3));
+  border: 1px solid rgba(150, 190, 200, 0.12);
+  border-radius: 16px;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.ds-page-title h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #e0f0f5;
+  letter-spacing: -0.5px;
+}
+
+/* Filter Bar */
+.ds-filter-bar {
+  background: linear-gradient(135deg, rgba(35, 45, 55, 0.4), rgba(25, 30, 38, 0.3));
+  border: 1px solid rgba(150, 190, 200, 0.12);
+  border-radius: 14px;
+  padding: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 8px;
+  backdrop-filter: blur(10px);
+}
+
+.ds-filter-item {
+  flex: 1;
+  background: rgba(150, 190, 200, 0.05);
+  border: 1px solid rgba(150, 190, 200, 0.1);
+  border-radius: 10px;
+  padding: 12px 10px;
+  font-size: 22px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: rgba(224, 240, 245, 0.6);
+}
+
+.ds-filter-item:hover {
+  background: rgba(150, 190, 200, 0.1);
+  border-color: rgba(150, 190, 200, 0.2);
+}
+
+.ds-filter-item.active {
+  background: rgba(150, 190, 200, 0.15);
+  border-color: rgba(150, 190, 200, 0.3);
+  color: #e0f0f5;
+}
+
+/* Card */
+.ds-card {
+  background: linear-gradient(145deg, #181d23 0%, #0f1318 100%);
+  border: 1px solid rgba(150, 190, 200, 0.12);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4),
+              0 1px 0 rgba(150, 190, 200, 0.04) inset;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+/* Table */
+.ds-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ds-table thead th {
+  padding: 10px 8px;
+  background: rgba(150, 190, 200, 0.08);
+  font-size: 11px;
+  color: rgba(200, 225, 235, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  text-align: center;
+  border-bottom: 1px solid rgba(150, 190, 200, 0.08);
+}
+
+.ds-table thead th.left {
+  text-align: left;
+  padding-left: 16px;
+}
+
+.ds-table tbody tr {
+  border-bottom: 1px solid rgba(150, 190, 200, 0.08);
+  transition: background 0.2s ease;
+}
+
+.ds-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.ds-table tbody td {
+  padding: 10px 8px;
+  text-align: center;
+  font-size: 13px;
+  color: rgba(224, 240, 245, 0.9);
+}
+
+.ds-table tbody td.left {
+  text-align: left;
+  padding-left: 16px;
+  font-weight: 600;
+}
+
+/* Badge */
+.ds-badge {
+  display: inline-block;
+  color: #000;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 11px;
+}
+
+/* Points */
+.ds-pts {
+  color: #b8d8e8;
+  font-weight: 700;
+}
+
+/* Footer */
+.ds-footer {
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.12), rgba(234, 88, 12, 0.08));
+  border-top: 1px solid rgba(220, 38, 38, 0.2);
+  padding: 14px 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.ds-footer .label {
+  color: rgba(248, 113, 113, 0.9);
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, rgba(24, 29, 35, 0.95) 0%, rgba(15, 19, 24, 0.98) 100%);
+  border-top: 1px solid rgba(150, 190, 200, 0.12);
+  padding: 8px 0;
+  display: flex;
+  justify-content: space-around;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-item .icon {
+  font-size: 22px;
+  opacity: 0.5;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item .label {
+  font-size: 11px;
+  opacity: 0.5;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+}
+
+.nav-item.active .icon,
+.nav-item.active .label {
+  opacity: 1;
+  color: #b8d8e8;
+}
+
+/* Match specific styles */
+.match-filter-bar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 0.8fr;
+  gap: 8px;
+}
+
+.match-filter-item {
+  background: rgba(150, 190, 200, 0.05);
+  border: 1px solid rgba(150, 190, 200, 0.1);
+  border-radius: 10px;
+  padding: 10px 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+.match-filter-icon {
+  font-size: 20px;
+}
+
+.match-filter-label {
+  font-size: 10px;
+  color: rgba(224, 240, 245, 0.7);
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.match-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-bottom: 1px solid rgba(150, 190, 200, 0.08);
+  transition: background 0.2s ease;
+}
+
+.match-row:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.team-select {
+  flex: 1;
+  background: rgba(150, 190, 200, 0.05);
+  border: 1px solid rgba(150, 190, 200, 0.1);
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 11px;
+  font-weight: 700;
+  text-align: center;
+  color: rgba(224, 240, 245, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.team-select.filled {
+  background: rgba(150, 190, 200, 0.12);
+  border-color: rgba(150, 190, 200, 0.2);
+  color: #e0f0f5;
+}
+
+.score-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.score-input {
+  width: 40px;
+  height: 40px;
+  background: rgba(150, 190, 200, 0.08);
+  border: 1px solid rgba(150, 190, 200, 0.15);
+  border-radius: 8px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: rgba(224, 240, 245, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.score-input.filled {
+  background: rgba(150, 190, 200, 0.15);
+  border-color: rgba(150, 190, 200, 0.25);
+  color: #e0f0f5;
+}
+
+.score-vs {
+  font-size: 14px;
+  color: rgba(224, 240, 245, 0.4);
+}
+
+/* Empty state */
+.empty {
+  color: rgba(224, 240, 245, 0.3);
+}
+
+/* Season badge */
+.season-badge {
+  background: rgba(150, 190, 200, 0.15);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 12px;
+  color: #e0f0f5;
+}
+
+/* Points unit */
+.pts-unit {
+  font-size: 10px;
+  opacity: 0.5;
+  margin-left: 2px;
+}
